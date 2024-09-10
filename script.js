@@ -28,8 +28,8 @@ hoverEffect()
 
 gridSizeBtn.addEventListener('click', () => {
     let userDefinedGrid = prompt('Enter a single number that will be multipled by itself for the grid')
-    while(userDefinedGrid > 100){
-        userDefinedGrid = prompt('Please dont enter a number over 100 as this can cause issues with the browser crashing')
+    while(userDefinedGrid > 100 || userDefinedGrid <= 0){
+        userDefinedGrid = prompt('Please dont enter a number over 100 or less than 1 as this can cause issues with the browser crashing')
     }
         sketchContainer.textContent = ''
         createGrid(userDefinedGrid)
