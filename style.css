@@ -19,7 +19,7 @@
     padding-top: 20px;
 }
 
-.gridSizeBtn{
+button{
     padding: 20px;
     color: yellow;
     background-color: red;
@@ -42,4 +42,8 @@ main{
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
+}
+
+.borderless{
+    border: none;
 }
