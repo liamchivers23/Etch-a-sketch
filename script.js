@@ -1,5 +1,7 @@
 const sketchContainer = document.querySelector('.sketchContainer')
 const gridSizeBtn = document.querySelector('.gridSizeBtn')
+const removeBorderBtn = document.querySelector('.removeBorderBtn')
+const resetGridBtn = document.querySelector('.resetGridBtn')
 
 const containerWidth = 800;
 
@@ -34,4 +36,18 @@ gridSizeBtn.addEventListener('click', () => {
         sketchContainer.textContent = ''
         createGrid(userDefinedGrid)
         hoverEffect()
+})
+
+removeBorderBtn.addEventListener('click', () => {
+    let children = Array.from(sketchContainer.children)
+    
+    children.forEach(child => {
+        child.style.border = 'none';
+    });
+})
+
+resetGridBtn.addEventListener('click', () => {
+    sketchContainer.textContent = ''
+    createGrid(50)
+    hoverEffect()
 })
